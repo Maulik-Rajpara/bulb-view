@@ -17,9 +17,6 @@ class MyApp extends StatelessWidget {
           child: BulbView(
             colors: [Colors.yellow, Colors.orange, Colors.red],
             bulbSize: 150.0,
-            onTap: (index) => print("Tapped: $index"),
-            onLongPress: (index) => print("Long Pressed: $index"),
-            onDoubleTap: (index) => print("Double Tapped: $index"),
           ),
         ),
       ),

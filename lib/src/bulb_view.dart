@@ -20,7 +20,7 @@ class BulbView extends StatelessWidget {
   final Color resetColor; // Custom reset color
 
   const BulbView({
-    Key? key,
+    super.key,
     required this.colors,
     this.bulbSize = 100.0,
     this.onTap,
@@ -29,7 +29,7 @@ class BulbView extends StatelessWidget {
     this.onResetBulb,
     this.layoutType = 0,
     this.resetColor = Colors.black, // Default reset color
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +82,8 @@ class _BulbViewContent extends StatelessWidget {
               Center(
                 child: SvgPicture.asset(
                   "packages/bulb_package/assets/svg/bulb.svg",
-                  colorFilter: ColorFilter.mode(bulbProvider.currentColor, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(
+                      bulbProvider.currentColor, BlendMode.srcIn),
                   height: bulbSize,
                   semanticsLabel: 'Bulb',
                 ),
@@ -90,7 +91,9 @@ class _BulbViewContent extends StatelessWidget {
 
               // Dynamic Layout
               Positioned.fill(
-                child: layoutType == 0 ? _buildGridLayout(context) : _buildFlexibleLayout(context),
+                child: layoutType == 0
+                    ? _buildGridLayout(context)
+                    : _buildFlexibleLayout(context),
               ),
             ],
           ),

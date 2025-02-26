@@ -7,7 +7,8 @@ class BulbProvider extends ChangeNotifier {
   VoidCallback? _onResetBulb; // Callback when reset is triggered
 
   int get colorIndex => _colorIndex;
-  Color get currentColor => _colorIndex == -1 ? _resetColor : _colors[_colorIndex];
+  Color get currentColor =>
+      _colorIndex == -1 ? _resetColor : _colors[_colorIndex];
 
   /// Allow setting custom colors dynamically
   void setColors(List<Color> colors) {
