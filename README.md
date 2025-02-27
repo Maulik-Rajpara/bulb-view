@@ -11,4 +11,4 @@ A Flutter package to control smart bulbs with color, size, and gesture support.
 Add this to your `pubspec.yaml`:
 ```yaml
 dependencies:
-  bulb_package: ^0.0.1
+  bulb_package: ^0.0.2
